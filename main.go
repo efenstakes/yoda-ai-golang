@@ -1,10 +1,23 @@
 package main
 
 import (
-	"net/http"
+	"log"
 
+	"github.com/efenstakes/yoda-ai/prompt"
 	"github.com/gin-gonic/gin"
+	"github.com/spf13/viper"
 )
+
+func init() {
+	viper.SetConfigFile(".env")
+
+	// Find and read the config file
+	err := viper.ReadInConfig()
+
+	if err != nil {
+		log.Fatalf("Error while reading config file %s", err)
+	}
+}
 
 func main() {
 
@@ -12,12 +25,10 @@ func main() {
 	r := gin.Default()
 
 	// index route
-	r.GET("/", func(c *gin.Context) {
+	r.GET("/", prompt.Index)
 
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
+	// prompt route
+	r.GET("/prompt", prompt.Prompt)
 
 	// start server
 	r.Run() // listen and serve on 0.0.0.0:8080 (for windows "localhost:8080")
