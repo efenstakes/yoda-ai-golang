@@ -25,17 +25,18 @@ Yoda AI is a cutting-edge artificial intelligence designed to enhance your daily
 
 ## Tech Used
 
-1. Node.js: Yoda AI's backend is powered by Node.js, a fast and scalable JavaScript runtime. Node.js enables seamless handling of requests and provides a foundation for building robust server-side applications.
 
-2. Golang: Golang is the language of choice for this Yoda AI's codebase. It's a blazing fast language which could be deployed with ease and efficiency.
+1. Golang: Golang is the language of choice for this Yoda AI's codebase. It's a blazing fast language which could be deployed with ease and efficiency.
 
-3. AWS Lambda: Yoda AI takes advantage of AWS Lambda, a serverless computing service, to host and execute its backend functions. AWS Lambda ensures high availability and scalability without the need to manage infrastructure.
+1. Gin: Gin is a Golang webserver which prides itself in high performance with "Radix tree based routing, small memory foot print. No reflection. Predictable API performance.". This is used to power the Yoda AI chatbot.
 
-4. Serverless Framework: The Serverless Framework streamlines the deployment and management of serverless applications, including AWS Lambda functions, making development more efficient.
+2. AWS Lambda: Yoda AI takes advantage of AWS Lambda, a serverless computing service, to host and execute its backend functions. AWS Lambda ensures high availability and scalability without the need to manage infrastructure.
 
-5. Docker: Docker containers are used for local development and testing, ensuring consistency between development and production environments.
+3. Serverless Framework: The Serverless Framework streamlines the deployment and management of serverless applications, including AWS Lambda functions, making development more efficient.
 
-6. Langchain, LLMs & OpenAI: I started by using OpenAI to build the AI and I will include a branch called llm which has code for the same using Langchain and LLMs.
+4. Docker: Docker containers are used for local development and testing, ensuring consistency between development and production environments.
+
+5. Langchain, LLMs & OpenAI: I started by using OpenAI to build the AI and I will include a branch called llm which has code for the same using Langchain and LLMs.
 
 
 ## Extras
