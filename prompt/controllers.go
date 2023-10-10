@@ -13,7 +13,7 @@ import (
 func Index(c *gin.Context) {
 
 	c.JSON(http.StatusOK, gin.H{
-		"apiName": "Holmes AI",
+		"apiName": "Yoda AI",
 		"status":  "running",
 	})
 }
